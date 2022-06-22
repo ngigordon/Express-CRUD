@@ -1,7 +1,7 @@
 # practice_room
 We use this repo to practise github operations
 
-## List of Github operation to be
+## List of Github operation to Learn
 
 *   How to clone a github repository
 
