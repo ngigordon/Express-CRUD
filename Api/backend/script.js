@@ -4,13 +4,14 @@ const fs = require('fs')
 const path = require('path')
 // const cors = require('cors');
 const info = require('./data.json');
-console.log(info.posts);
+// console.log(info.posts);
 
 app.use(express.urlencoded({ extended: true }))
 
-app.get('/', (req, res) => {
-    res.setHeader('Access-Control-Allow-Origin', req.headers.origin)
 
+
+
+app.get('/', (req, res) => {
     res.send('Hello World Here I come')
 })
 
