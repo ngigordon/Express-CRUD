@@ -9,13 +9,18 @@ const info = require('./data.json');
 app.use(express.urlencoded({ extended: true }))
 
 
-
-
-app.get('/', (req, res) => {
-    res.send('Hello World Here I come')
+app.get('/',(request,response) =>{
+    response.send('<a href="./ui/index.html">Welcome</a>')
 })
 
-    .listen(5000, () => {
+app.get('/ui/*', (req, res) => {
+    console.log(req.url)
+    res.sendFile(path.join(__dirname,req.url))
+})
+
+app.get('/api/posts',(req,res) =>{
+
+}).listen(5000, () => {
         console.log(`http://localhost:5000/`)
     })
 
